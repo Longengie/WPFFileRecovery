@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFFileRecovery.GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" MinHeight="400" Height="450"  MinWidth="400" Width="400">
+    <Grid MinHeight="400" MinWidth="300">
         <TabControl>
             <TabItem Header="General">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Source Folder:" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
                     <Button Content="Browse Folder" HorizontalAlignment="Left" Margin="120,13,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400"/>
+                    <TextBox HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
                     <Label Content="Destination Folder:" HorizontalAlignment="Left" Margin="5,54,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400"/>
+                    <TextBox HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
                     <Button Content="Browse Folder" HorizontalAlignment="Left" Margin="120,57,0,0" VerticalAlignment="Top"/>
                     <Label Content="Search Content:" HorizontalAlignment="Left" Margin="5,98,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400"/>
+                    <TextBox HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
                     <Button Content="Add Search" HorizontalAlignment="Left" Margin="120,101,0,0" VerticalAlignment="Top"/>
                     <Button Content="Remove Search" HorizontalAlignment="Left" Margin="189,101,0,0" VerticalAlignment="Top"/>
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=36}" Margin="0,170,0,0"/>
+                    <ProgressBar HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="100"/>
+                    <Label Content="Search List" HorizontalAlignment="Left" Margin="5,144,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
             </TabItem>
@@ -27,6 +30,7 @@
                 <Grid Background="#FFE5E5E5">
                     <Button Content="View Folder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                     <Button Content="View Log" HorizontalAlignment="Left" Margin="81,10,0,0" VerticalAlignment="Top"/>
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,35,0,0"/>
                 </Grid>
             </TabItem>
         </TabControl>
