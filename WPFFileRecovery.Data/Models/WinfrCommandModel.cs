@@ -21,7 +21,7 @@ namespace WPFFileRecovery.Data.Models
         /// </summary>
         public string DestinationDriveType => WinfrCommandModelHelper.GetDriveType(DestinationDrive);
         public bool IsExtensive { get; set; }    
-        public string? FileMode { get; set; }
+        public char? FileMode { get; set; }
         /// <summary>
         /// Search List
         /// </summary>

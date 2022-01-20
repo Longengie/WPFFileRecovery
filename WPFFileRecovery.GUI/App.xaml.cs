@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ControlzEx.Theming;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
@@ -36,6 +37,8 @@ namespace WPFFileRecovery.GUI
 
             // Set MainWindows show only
             _host.Services.GetRequiredService<MainWindow>().Show();
+            ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
+            ThemeManager.Current.SyncTheme();
 
             base.OnStartup(e);
         }
